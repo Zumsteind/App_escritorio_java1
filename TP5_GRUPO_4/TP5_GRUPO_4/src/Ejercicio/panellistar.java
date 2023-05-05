@@ -32,18 +32,18 @@ public class panellistar extends JPanel {
 		Set<Peliculas> setPeliculas = new TreeSet<>();
 		for (int i = 0; i < listModel.size(); i++) {
 		    setPeliculas.add(listModel.getElementAt(i));
+		    
+		    
 		}
 		DefaultListModel<Peliculas> listModel2 = new DefaultListModel<>();
-		List<Peliculas> Lpeliculas = new ArrayList<>(setPeliculas);
 		
-		 
-		 for (Peliculas pelicula : Lpeliculas) {
+		 for (Peliculas pelicula : setPeliculas) {
 	            listModel2.addElement(pelicula);
+	            
 	        }
 		
 		
-		
-		
+		 
 		//ese model no vamos a mostrar otro mejor, que lo creamos y le metemos la lista peliculas.
 		lbPeliculas.setModel(listModel2);
 		
